@@ -1,0 +1,33 @@
+version: 1
+
+dn: ou=users,dc=example,dc=org
+objectClass: extensibleObject
+objectClass: organizationalUnit
+objectClass: top
+ou: users
+
+dn: cn=ldapuser,ou=users,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: ldapuser
+sn: ldapuser
+userPassword:: aG9sYQ==
+
+dn: cn=ldapgroup,ou=users,dc=example,dc=org
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: ldapgroup
+uniqueMember: cn=kibanaldapuser,ou=users,dc=example,dc=org
+uniqueMember: cn=ldapuser,ou=users,dc=example,dc=org
+
+dn: cn=kibanaldapuser,ou=users,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: kibanaldapuser
+sn: kibanaldapuser
+userPassword:: TGlmZXJheTc=
+
