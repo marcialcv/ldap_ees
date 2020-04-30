@@ -1,0 +1,4 @@
+Estructura organizativa LDAP de ejemplo para configurar Elastic Search y Kibana
+
+Open LDAP: https://github.com/osixia/docker-openldap
+docker run --hostname ldap.my-company.com -p 389:389 -p 636:636 --hostname ldap.my-company.com --env LDAP_TLS_VERIFY_CLIENT=allowed --detach osixia/openldap:1.3.0
